@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { BrowserRouter as Router, Swich, Route} from 'react-router-dom'
+import navbar from './components/navegacion/navbar';
+import inicio from './components/paginas/inicio';
+import remeras from './components/paginas/remeras';
+import tazas from './components/paginas/tazas';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <Router>
+          <navbar/>
+        </Router>
+        
+
+      </div>
+
+    </>
   );
 }
+
 
 export default App;
