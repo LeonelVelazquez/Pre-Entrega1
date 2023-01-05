@@ -1,22 +1,32 @@
 
 import './App.css';
-import { BrowserRouter as Router, Swich, Route} from 'react-router-dom'
-import navbar from './components/navegacion/navbar';
+import Navbar from './components/navegacion/Navbar';
 import inicio from './components/paginas/inicio';
 import remeras from './components/paginas/remeras';
 import tazas from './components/paginas/tazas';
+import Cards from './components/Cards/Cards';
+import flexWrapper from './components/flexWrapper/flexWrapper'
+
 
 function App() {
   return (
     <>
       <div className="App">
-        <Router>
-          <navbar/>
-        </Router>
-        
-
+          <Navbar/>
+         
       </div>
 
+      <flexWrapper>
+        <Cards
+        title="Remeras"
+        price={500}
+        detail="Remera de Gato"
+        img=""/>
+        <Cards/>
+        <Cards/>
+      </flexWrapper>
+      
+      
     </>
   );
 }
