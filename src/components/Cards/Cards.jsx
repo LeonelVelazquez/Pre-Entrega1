@@ -1,15 +1,21 @@
 import React from 'react'
-
+import Button from '../button/Button';
 function Cards(props) {
+  const {title, price, detail, imgurl} = props;
   return (
     <div>
-        <img src="" alt="Imagen" />
-        <div>
-            <h3>Titulo</h3>
-            <h4>$</h4>
-            <p>Detalle Product</p>
+        <img width="200px" src={imgurl} alt="Imagen" />
+        <center>
+          <div>
+            <h3>{title}</h3>
+            <h4>{price}</h4>
+            <p>{detail}</p>
         </div>
+        <Button>Ver detalles</Button>
+        </center>
+        
     </div>
+    
   )
 }
 

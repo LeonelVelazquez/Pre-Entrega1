@@ -5,8 +5,12 @@ import inicio from './components/paginas/inicio';
 import remeras from './components/paginas/remeras';
 import tazas from './components/paginas/tazas';
 import Cards from './components/Cards/Cards';
-import flexWrapper from './components/flexWrapper/flexWrapper'
+import FlexWrapper from './components/flexWrapper/flexWrapper'
+import Button from './components/button/Button';
 
+import imgRemeras from './assets/img/Remeras.png'
+import GRIZZY from './assets/img/GRIZZY.png'
+import TazaRafa from './assets/img/TazaRafa.png'
 
 function App() {
   return (
@@ -15,17 +19,27 @@ function App() {
           <Navbar/>
          
       </div>
-
-      <flexWrapper>
+      <hr/>
+      <FlexWrapper>
         <Cards
         title="Remeras"
-        price={500}
+        price={2000}
         detail="Remera de Gato"
-        img=""/>
-        <Cards/>
-        <Cards/>
-      </flexWrapper>
+        imgurl={imgRemeras}/>
+         <Cards
+        title="Taza de Spiderman"
+        price={1200}
+        detail="Taza Rafa 250ml"
+        imgurl={TazaRafa}/>
+         <Cards
+        title="Set de Jardin"
+        price={500}
+        detail="Set de Jardin completo"
+        imgurl={GRIZZY}/>
+       
+      </FlexWrapper>
       
+       
       
     </>
   );
